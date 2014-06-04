@@ -1,4 +1,4 @@
-package com.guru.mayoo;
+package com.guru.mayoo.simple;
 
 
 import javax.servlet.ServletException;
@@ -12,14 +12,14 @@ public class SimpleServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.println("SimpleServlet GET Request Executed");
+        out.println("Simple Servlet GET Request Executed");
         out.flush();
         out.close();
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.println("SimpleServlet POST Request Executed");
+        out.println("Simple Servlet POST Request Executed");
         out.flush();
         out.close();
     }

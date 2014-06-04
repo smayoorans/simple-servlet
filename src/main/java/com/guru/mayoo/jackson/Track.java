@@ -1,4 +1,4 @@
-package com.guru.mayoo;
+package com.guru.mayoo.jackson;
 
 public class Track {
     String title;

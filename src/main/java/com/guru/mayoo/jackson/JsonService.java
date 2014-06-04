@@ -1,11 +1,13 @@
-package com.guru.mayoo;
+package com.guru.mayoo.jackson;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 
 @Path("/json/metallica")
-public class JSONService {
+public class JsonService {
 
     @GET
     @Path("/get")
@@ -14,8 +16,15 @@ public class JSONService {
 
         Track track = new Track();
         track.setTitle("Enter Sandman");
-        track.setSinger("Metallica");
+        track.setSinger("Mayooran");
 
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            System.out.println(mapper.defaultPrettyPrintingWriter().writeValueAsString(track));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return track;
 
     }
