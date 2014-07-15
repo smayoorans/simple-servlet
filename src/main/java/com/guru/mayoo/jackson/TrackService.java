@@ -1,12 +1,11 @@
 package com.guru.mayoo.jackson;
 
-import org.codehaus.jackson.map.ObjectMapper;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
 
-@Path("/json/metallica")
+@Path("/json/track")
 public class TrackService {
 
     @GET
@@ -26,7 +25,7 @@ public class TrackService {
     public Response createTrackInJSON(Track track) {
 
         String result = "Track saved : " + track;
-        return Response.status(201).entity(result).build();
+        return Response.status(200).entity(result).build();
 
     }
 

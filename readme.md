@@ -1,10 +1,13 @@
-#This is simple example project on json jackson
+#Simple example project on jersey jackson
 
 
-curl -X Get http://localhost:8090/simple-servlet/simple
-curl -X Post http://localhost:8090/simple-servlet/simple
+##To check the api calls in this example use the following curl scripts
 
-curl http://localhost:8090/simple-servlet/rest/json/metallica/get
+curl -X GET http://localhost:8090/simple-servlet/simple
 
-curl -v -H "Content-Type:application/json" -X POST -d '{"singer":"Metallica","title":"Enter Sandman"}' http://localhost:8090/simple-servlet/rest/json/metallica/post
+curl -X POST http://localhost:8090/simple-servlet/simple
+
+    curl -X GET http://localhost:8090/simple-servlet/guru-api/v1/json/track/get
+
+    curl -v -H "Content-Type:application/json" -X POST -d '{"singer":"Mayoo","title":"Enter Sandman"}' http://localhost:8090/simple-servlet/guru-api/v1/json/track/post
 

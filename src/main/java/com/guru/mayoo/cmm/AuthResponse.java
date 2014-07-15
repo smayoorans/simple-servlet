@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class AuthResponse {
 
-    String requestId;
-    String statusCode;
-    String statusDescription;
-    Map<String, Object> results;
+    private String requestId;
+    private String statusCode;
+    private String statusDescription;
+    private Map<String, Object> results;
 
     public String getRequestId() {
         return requestId;

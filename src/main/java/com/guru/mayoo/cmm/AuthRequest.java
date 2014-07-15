@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class AuthRequest {
 
-    String  requestId;
-    String  requestingSystem;
-    String requestedTime;
-    String  cardUId;
-    String  cardSecToken;
+    private String  requestId;
+    private String  requestingSystem;
+    private String requestedTime;
+    private String  cardUId;
+    private String  cardSecToken;
 
     public String getRequestId() {
         return requestId;
@@ -48,10 +48,5 @@ public class AuthRequest {
 
     public void setCardSecToken(String cardSecToken) {
         this.cardSecToken = cardSecToken;
-    }
-
-    @Override
-    public String toString() {
-        return "AuthRequest [requestId=" + requestId + ", requestingSystem=" + requestingSystem + "]";
     }
 }
