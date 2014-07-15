@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 @Path("/json/metallica")
-public class JsonService {
+public class TrackService {
 
     @GET
     @Path("/get")
@@ -15,18 +15,9 @@ public class JsonService {
     public Track getTrackInJSON() {
 
         Track track = new Track();
-        track.setTitle("Enter Sandman");
+        track.setTitle("Like a Rolling Stone ");
         track.setSinger("Mayooran");
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            System.out.println(mapper.defaultPrettyPrintingWriter().writeValueAsString(track));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return track;
-
     }
 
     @POST
