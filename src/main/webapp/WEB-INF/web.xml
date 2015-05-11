@@ -34,7 +34,7 @@
 
     <servlet-mapping>
         <servlet-name>jersey-serlvet</servlet-name>
-        <url-pattern>/cmm-api/v1/*</url-pattern>
+        <url-pattern>/guru-api/v1/*</url-pattern>
     </servlet-mapping>
 
 </web-app>

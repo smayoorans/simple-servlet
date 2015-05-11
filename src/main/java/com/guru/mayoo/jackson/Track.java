@@ -1,6 +1,7 @@
 package com.guru.mayoo.jackson;
 
 public class Track {
+
     String title;
     String singer;
 

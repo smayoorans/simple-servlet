@@ -1,17 +1,21 @@
 package com.guru.mayoo.jackson;
 
-import org.codehaus.jackson.map.ObjectMapper;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
 
+<<<<<<< HEAD:src/main/java/com/guru/mayoo/jackson/JsonService.java
 @Path("/json/metallica")
 <<<<<<< HEAD:src/main/java/com/guru/mayoo/jackson/JsonService.java
 public class JsonService {
 =======
 public class TrackService {
 >>>>>>> parent of 509f9f0... Refactoring round 2:src/main/java/com/guru/mayoo/jackson/TrackService.java
+=======
+@Path("/json/track")
+public class TrackService {
+>>>>>>> 509f9f083de8ac79a33b6b3a0d3e3445968c2958:src/main/java/com/guru/mayoo/jackson/TrackService.java
 
     @GET
     @Path("/get")
@@ -19,18 +23,9 @@ public class TrackService {
     public Track getTrackInJSON() {
 
         Track track = new Track();
-        track.setTitle("Enter Sandman");
+        track.setTitle("Like a Rolling Stone ");
         track.setSinger("Mayooran");
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            System.out.println(mapper.defaultPrettyPrintingWriter().writeValueAsString(track));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return track;
-
     }
 
     @POST
@@ -39,7 +34,7 @@ public class TrackService {
     public Response createTrackInJSON(Track track) {
 
         String result = "Track saved : " + track;
-        return Response.status(201).entity(result).build();
+        return Response.status(200).entity(result).build();
 
     }
 
