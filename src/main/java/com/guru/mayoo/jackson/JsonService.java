@@ -7,7 +7,11 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 @Path("/json/metallica")
+<<<<<<< HEAD:src/main/java/com/guru/mayoo/jackson/JsonService.java
 public class JsonService {
+=======
+public class TrackService {
+>>>>>>> parent of 509f9f0... Refactoring round 2:src/main/java/com/guru/mayoo/jackson/TrackService.java
 
     @GET
     @Path("/get")
